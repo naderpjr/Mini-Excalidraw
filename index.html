@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Excalidraw</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+
+<body>
+  <div class="toolbar" id="tools">
+    <button data-tool="select" title="Select (1)"><i data-lucide="mouse-pointer-2"></i></button>
+    <button data-tool="rect" title="Rectangle (2)"><i data-lucide="square"></i></button>
+    <button data-tool="ellipse" title="Ellipse (3)"><i data-lucide="circle"></i></button>
+    <button data-tool="diamond" title="Diamond (4)"><i data-lucide="diamond"></i></button>
+    <button data-tool="arrow" title="Arrow (5)"><i data-lucide="move-up-right"></i></button>
+    <button data-tool="line" title="Line (6)"><i data-lucide="minus"></i></button>
+    <button data-tool="pen" title="Pen (7)"><i data-lucide="pencil"></i></button>
+    <button data-tool="eraser" title="Eraser (8)"><i data-lucide="eraser"></i></button>
+  </div>
+
+  <div class="toolbar actions">
+    <input type="color" id="color" value="#1e1e1e" title="Color" />
+    <button id="undo" title="Undo (Ctrl+Z)"><i data-lucide="undo-2"></i></button>
+    <button id="redo" title="Redo (Ctrl+Shift+Z)"><i data-lucide="redo-2"></i></button>
+    <button id="export" title="Export PNG"><i data-lucide="download"></i></button>
+    <button id="clear" title="Clear canvas"><i data-lucide="trash-2"></i></button>
+  </div>
+
+  <canvas id="canvas"></canvas>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+:root {
+  --ink: #1e1e1e;
+  --paper: #fbfbf9;
+  --dot: #d9d9d4;
+  --accent: #6965db;
+  --accent-soft: #e4e3fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--paper);
+  background-image: radial-gradient(var(--dot) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+canvas {
+  position: fixed;
+  inset: 0;
+  touch-action: none;
+  cursor: crosshair;
+}
+
+.toolbar {
+  position: fixed;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  gap: 4px;
+  padding: 6px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 0 1px #e6e6e1, 0 6px 18px rgba(0, 0, 0, .08);
+}
+
+.toolbar.actions {
+  top: auto;
+  bottom: 14px;
+  align-items: center;
+}
+
+.toolbar button {
+  min-width: 38px;
+  height: 38px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--ink);
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.toolbar button:hover {
+  background: #f1f1ee;
+}
+
+.toolbar button:focus-visible {
+  outline: 2px solid var(--accent);
+}
+
+.toolbar button.active {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.actions button {
+  font-size: 14px;
+}
+
+#color {
+  width: 34px;
+  height: 34px;
+  border: 0;
+  padding: 2px;
+  background: none;
+  cursor: pointer;
+}
+
+.toolbar button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toolbar svg {
+  pointer-events: none;
+}
